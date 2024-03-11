@@ -1,0 +1,13 @@
+{% if item.img %}
+	<a href="images/about/reviews/{{ item.img }}.jpg" class="reviews-item glightbox"
+	   data-gallery="gallery">
+		<picture>
+			<source srcset="images/about/reviews/{{ item.img }}.webp 1x, images/about/reviews/{{ item.img }}@2x.webp 1.3x"
+			        type="image/webp">
+			<source srcset="images/about/reviews/{{ item.img }}.jpg 1x, images/about/reviews/{{ item.img }}@2x.jpg 1.3x"
+			        type="image/jpg">
+			<img src="images/about/reviews/{{ item.img }}.jpg" width="826"
+			     height="1197" alt="">
+		</picture>
+	</a>
+{% endif %}

@@ -1,0 +1,57 @@
+.interesting__main {
+	padding-bottom : 50px;
+	position       : relative;
+
+	@media screen and (min-width : $break-table) {
+		padding-bottom : 0;
+	}
+
+	.b-btn--link {
+		bottom    : 0;
+		left      : 50%;
+		position  : absolute;
+		transform : translateX(-50%);
+
+		@media screen and (min-width : $break-table) {
+			left      : unset;
+			position  : relative;
+			transform : unset;
+		}
+	}
+}
+
+.interesting__wrap {
+	.swiper-nav {
+		@media screen and (min-width : $break-table) {
+			display : none;
+		}
+	}
+}
+
+.interesting__wrapper {
+	margin : 0 -14px;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 -22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 -12px;
+	}
+}
+
+.swiper--interesting {
+	.swiper-slide {
+		display : flex;
+		height  : auto;
+		width   : 100%;
+
+		@media screen and (min-width : $break-table) {
+			width : 50%;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			width : 25%;
+		}
+	}
+}

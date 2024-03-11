@@ -1,0 +1,24 @@
+{% extends "../template/layout.twig" %}
+{% block title %}{{ "Главная" }}{% endblock %}
+{% block page %}
+	{% include "../partial/home/hero.twig" with { 'data' : hero } only %}
+	{% include "../partial/home/products.twig"  with { 'data' : products } only %}
+	{% include "../partial/home/banner.twig" with {
+		bannerText: 'Качественная и оперативная аналитика мировых рынков нефти и газа',
+	} only %}
+	{% include "../partial/home/markets.twig" with { 'data' : markets } only %}
+	{% include "../partial/home/about.twig" %}
+	{% include "../partial/home/mailing.twig" %}
+	{% include "../partial/home/trust.twig" with {
+		'data' : trust,
+		'trustHead': true
+	} only %}
+	{% include "../partial/home/news.twig" with { 'data' : news } only %}
+	{% include "../partial/home/feedback.twig" with {
+		titleFeedback: 'Остались вопросы?',
+		textFeedback: 'Сообщите нам, что вас интересует, и мы обязательно ответим'
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+{% endblock %}

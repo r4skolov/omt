@@ -1,0 +1,149 @@
+.news-section__wrapper {
+	padding-bottom : 50px;
+	position       : relative;
+
+	.b-btn--link {
+		bottom    : 0;
+		left      : 50%;
+		position  : absolute;
+		transform : translateX(-50%);
+
+		@media screen and (min-width : $break-table) {
+			left      : unset;
+			position  : relative;
+			transform : unset;
+		}
+	}
+}
+
+.news-section__wrap {
+	margin : 0 -14px;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 -22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 -12px;
+	}
+}
+
+.news-section__head {
+	.swiper-nav {
+
+		@media screen and (min-width : $break-table) {
+			display : none;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+
+		}
+	}
+}
+
+.news-card {
+	background-color : $second-blue;
+	border-radius    : $border-radius;
+	display          : flex;
+	flex-direction   : column;
+	margin           : 0 14px;
+	position         : relative;
+	width            : 100%;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 20px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 12px;
+	}
+
+	&:hover {
+		.news-card__icon {
+			transform : rotate(45deg);
+
+			svg {
+				rect {
+					fill       : $blue;
+					stroke     : $white;
+					transition : fill .3s ease, stroke .3s ease;
+				}
+
+				path {
+					stroke     : $white;
+					transition : stroke .3s ease;
+				}
+			}
+		}
+	}
+}
+
+.news-card__icon {
+	background-repeat : no-repeat;
+	background-size   : cover;
+	height            : 40px;
+	position          : absolute;
+	right             : 16px;
+	top               : 16px;
+	transition        : transform .3s ease;
+	width             : 40px;
+
+	svg {
+		rect {
+			fill       : $white;
+			stroke     : $blue;
+			transition : fill .3s ease, stroke .3s ease;
+		}
+
+		path {
+			stroke     : $blue;
+			transition : stroke .3s ease;
+		}
+	}
+}
+
+.news-card__img {
+	max-height : 220px;
+
+	img {
+		border-radius : $border-radius;
+		height        : 100%;
+		object-fit    : cover;
+		width         : 100%;
+	}
+}
+
+.news-card__text {
+	color       : $dark;
+	font-size   : 18px;
+	font-weight : 600;
+	line-height : 24px;
+	padding     : 24px 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 24px;
+		line-height : 30px;
+		padding     : 24px 16px 32px 16px;
+	}
+}
+
+.swiper--news {
+	.swiper-slide {
+		display : flex;
+		height  : auto;
+		width   : 100%;
+
+		@media screen and (min-width : $break-table) {
+			width : 50%;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			width : 33.33333%;
+		}
+
+	}
+}

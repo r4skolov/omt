@@ -1,0 +1,26 @@
+<div class="news-item">
+	{% if item.img %}
+		<div class="news-item__img">
+			<picture>
+				<source srcset="images/news-list/{{ item.img }}.webp 1x, images/news-list/{{ item.img }}@2x.jpg 1.3x"
+				        type="image/webp">
+				<source srcset="images/news-list/{{ item.img }}.jpg 1x, images/news-list/{{ item.img }}@2x.jpg 1.3x"
+				        type="image/jpg">
+				<img src="images/news-list/{{ item.img }}.jpg" width="600"
+				     height="260" alt="">
+			</picture>
+		</div>
+	{% endif %}
+	<div class="news-item__wrap">
+		{% if item.title %}
+			<div class="news-item__name">
+				{{ item.title }}
+			</div>
+		{% endif %}
+		{% if item.path %}
+			<a href="{{ item.path }}" class="b-btn b-btn--white">
+				{{ 'Читать новость' }}
+			</a>
+		{% endif %}
+	</div>
+</div>

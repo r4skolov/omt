@@ -1,0 +1,26 @@
+<div class="team-item">
+	{% if item.img %}
+		<div class="team-item__img">
+			<picture>
+				<source srcset="images/about/team/{{ item.img }}.webp 1x, images/about/team/{{ item.img }}@2x.webp 1.3x"
+				        type="image/webp">
+				<source srcset="images/about/team/{{ item.img }}.png 1x, images/about/team/{{ item.img }}@2x.png 1.3x"
+				        type="image/png">
+				<img src="images/about/team/{{ item.img }}.jpg" width="288"
+				     height="360" alt="">
+			</picture>
+		</div>
+	{% endif %}
+	<div class="team-item__wrap">
+		{% if item.pos %}
+			<div class="team-item__position">
+				{{ item.pos }}
+			</div>
+		{% endif %}
+		{% if item.pos %}
+			<div class="team-item__name">
+				{{ item.name }}
+			</div>
+		{% endif %}
+	</div>
+</div>

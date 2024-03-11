@@ -1,0 +1,34 @@
+.news-list {
+	padding-bottom : 32px;
+	@media screen and (min-width : $break-table) {
+		padding-bottom : 42px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding-bottom : 48px;
+	}
+}
+
+.news-list__head {
+	margin-bottom : 24px;
+}
+
+.news-list__title {
+	margin-bottom : 16px;
+}
+
+.news-list__grid {
+	display               : grid;
+	grid-gap              : 24px;
+	grid-template-columns : repeat(4, 1fr);
+	margin-bottom         : 24px;
+
+	@media screen and (min-width : $break-table) {
+		grid-gap              : 24px;
+		grid-template-columns : repeat(12, 1fr);
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : 36px;
+	}
+}

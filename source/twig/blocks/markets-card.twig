@@ -1,0 +1,33 @@
+<div class="market-card market-card--{{ item.class }} {{ item.item ? ' active' }}">
+	<div class="market-card__wrap">
+		{% if item.icon %}
+			<div class="market-card__icon">
+				<img src="images/home/markets/{{ item.icon }}.svg" alt="" width="48" height="48">
+			</div>
+		{% endif %}
+		{% if item.name %}
+			<div class="market-card__name">
+				{{ item.name }}
+			</div>
+		{% endif %}
+	</div>
+	{% if item.text %}
+		<div class="market-card__text">
+			<p>
+				{{ item.text }}
+			</p>
+		</div>
+	{% endif %}
+	{% if item.img %}
+		<div class="market-card__img">
+			<picture>
+				<source srcset="images/home/markets/{{ item.img.path }}.webp 1x, images/home/markets/{{ item.img.path }}@2x.webp 1.3x"
+				        type="image/webp">
+				<source srcset="images/home/markets/{{ item.img.path }}.png 1x, images/home/markets/{{ item.img.path }}@2x.png 1.3x"
+				        type="image/png">
+				<img src="images/home/markets/{{ item.img.path }}.png" width="{{ item.img.width }}"
+				     height="{{ item.img.height }}" alt="">
+			</picture>
+		</div>
+	{% endif %}
+</div>

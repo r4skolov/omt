@@ -1,0 +1,44 @@
+.breadcrumbs {
+	padding-top : 24px;
+
+	@media screen and (min-width : $break-table) {
+		
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding-top : 60px;
+	}
+}
+
+.breadcrumbs__list {
+	align-items : center;
+	display     : flex;
+}
+
+.breadcrumbs__item {
+	& + & {
+		margin-left : 5px;
+	}
+
+	&:not(:last-child) {
+		&:after {
+			color        : $dark;
+			content      : "/";
+			display      : inline-block;
+			font-size    : 12px;
+			font-weight  : 500;
+			line-height  : 20px;
+			opacity      : 0.5;
+			padding-left : 5px;
+		}
+	}
+}
+
+.breadcrumbs__link {
+	color       : $dark;
+	font-size   : 12px;
+	font-style  : normal;
+	font-weight : 500;
+	line-height : 20px;
+	opacity     : 0.5;
+}

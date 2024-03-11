@@ -1,0 +1,37 @@
+{% if data|length > 0 %}
+	<section class="news-list" data-slider="categories-slider">
+		<div class="container">
+			<div class="news-list__head">
+				<h2 class="section-title news-list__title">
+					{{ 'Новости' }}
+				</h2>
+				<div class="categories-list">
+					<div class="swiper swiper--categories">
+						<div class="swiper-wrapper">
+							{% for value in data.categories %}
+								<div class="swiper-slide">
+									{% if value.btn %}
+										<button type="button"
+										        class="btn-categories {{ value.btn.class ? ' active' }}">
+											{{ value.btn.name }}
+										</button>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="news-list__grid">
+				{% for item in data.list %}
+					{% include "../../blocks/news-item.twig" with {
+						'item': item,
+					} only %}
+				{% endfor %}
+			</div>
+			<button class="b-btn b-btn--blue b-btn--news">
+				{{ 'Загрузить еще' }}
+			</button>
+		</div>
+	</section>
+{% endif %}

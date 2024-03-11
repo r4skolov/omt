@@ -1,0 +1,204 @@
+.hero {
+	margin-top     : 20px;
+	padding-bottom : 32px;
+
+	@media screen and (min-width : $break-table) {
+		margin-top     : 32px;
+		padding-bottom : 42px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding-bottom : 48px;
+	}
+}
+
+.hero--markets {
+	margin-top : 24px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-top : 16px;
+	}
+}
+
+.hero__wrapper {
+
+	position : relative;
+
+	@media screen and (min-width : 1440px) {
+		margin : 0 -60px;
+	}
+
+	.swiper-button {
+		bottom   : 0;
+		display  : none;
+		height   : 24px;
+		position : absolute;
+		width    : 24px;
+		z-index  : 1;
+
+		@media screen and (min-width : $break-table) {
+			display : inline-flex;
+		}
+
+
+		@media screen and (min-width : 1440px) {
+			height    : 40px;
+			top       : 50%;
+			transform : translateY(-50%);
+			width     : 40px;
+		}
+
+		svg {
+			height : 8.5px;
+			width  : 12px;
+
+			@media screen and (min-width : 1440px) {
+				height : auto;
+				width  : auto;
+			}
+		}
+	}
+
+	.swiper-button-prev {
+		left : 0;
+		@media screen and (min-width : 1440px) {
+			left : 5px;
+		}
+	}
+
+	.swiper-button-next {
+		right : 0;
+
+		@media screen and (min-width : 1440px) {
+			right : 5px;
+		}
+	}
+}
+
+.hero-item {
+	align-items           : center;
+	background-color      : #E3ECFF;
+	border-radius         : 12px;
+	display               : grid;
+	grid-gap              : 24px;
+	grid-template-columns : repeat(4, 1fr);
+	margin                : 0 14px;
+
+	@media screen and (min-width : $break-table) {
+		grid-gap              : 25px;
+		grid-template-columns : repeat(12, 1fr);
+		margin                : 0 24px;
+	}
+
+	@media screen and (min-width : 1440px) {
+		margin : 0 10px;
+	}
+}
+
+.hero-item__wrap {
+	grid-column : 4 span;
+	padding     : 0 16px 24px 16px;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 6 span;
+		padding     : 24px 0 28px 24px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding : 32px 0 32px 48px;
+	}
+}
+
+.hero-item__img {
+	grid-column : 4 span;
+	order       : -1;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 6 span;
+		order       : unset;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+
+	img {
+		border-radius : 12px;
+		height        : 100%;
+		object-fit    : cover;
+		width         : 100%;
+	}
+}
+
+
+.hero-item__logo {
+	height        : 32px;
+	margin-bottom : 24px;
+	width         : 52px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		height        : 62px;
+		margin-bottom : 32px;
+		width         : 100px;
+	}
+}
+
+.hero-item__title {
+	color         : $dark;
+	font-size     : 20px;
+	font-weight   : 600;
+	line-height   : 20px;
+	margin-bottom : 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 38px;
+		line-height : 38px;
+	}
+}
+
+.hero-item__text {
+	color       : $dark;
+	font-size   : 16px;
+	font-weight : 400;
+	line-height : 18px;
+	opacity     : 0.8;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 20px;
+		line-height : 28px;
+		max-width   : 392px;
+	}
+}
+
+.swiper--hero {
+	margin   : 0 -14px;
+	position : relative;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 -24px;
+	}
+
+	@media screen and (min-width : 1440px) {
+		margin : 0 50px;
+	}
+
+	.swiper-pagination {
+		margin-top : 8px;
+	}
+}

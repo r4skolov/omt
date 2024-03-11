@@ -1,0 +1,34 @@
+<div class="product-card{{ class ? ' ' ~ class }}">
+	{% if item.status %}
+		<div class="product-card__category product-card__category--{{ item.status.class }}">
+			{{ item.status.name }}
+		</div>
+	{% endif %}
+	{% if item.img %}
+		<div class="product-card__img">
+			<picture>
+				<source srcset="images/home/products/{{ item.img }}.webp 1x, images/home/products/{{ item.img }}@2x.webp 1.3x"
+				        type="image/webp">
+				<source srcset="images/home/products/{{ item.img }}.jpg 1x, images/home/products/{{ item.img }}@2x.jpg 1.3x"
+				        type="image/jpg">
+				<img src="images/home/products/{{ item.img }}.jpg" width="288"
+				     height="211" alt="">
+			</picture>
+		</div>
+	{% endif %}
+	<div class="product-card__wrap">
+		{% if item.name %}
+			<div class="product-card__name">
+				{{ item.name }}
+			</div>
+		{% endif %}
+		{% if item.text %}
+			<div class="product-card__text">
+				<p>
+					{{ item.text }}
+				</p>
+			</div>
+		{% endif %}
+		<button type="button" class="b-btn b-btn--white">{{ "Добавить в корзину" }}</button>
+	</div>
+</div>

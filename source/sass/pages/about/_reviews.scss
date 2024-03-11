@@ -1,0 +1,80 @@
+.reviews__head {
+	align-items    : flex-start;
+	flex-direction : column;
+
+	@media screen and (min-width : $break-table) {
+		flex-direction : row;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+
+	.swiper-nav {
+		margin-left : auto;
+	}
+}
+
+.reviews__wrap {
+	margin : 0 -14px;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 -22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 -10px;
+	}
+}
+
+.reviews-item {
+	background-color : #E3ECFF;
+	border-radius    : 12px;
+	display          : block;
+	margin           : 0 14px;
+	padding          : 16px 16px;
+	position         : relative;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 10px;
+	}
+
+	&:after {
+		background-image  : url("../images/icon/zoom.svg");
+		background-repeat : no-repeat;
+		background-size   : cover;
+		bottom            : 32px;
+		content           : "";
+		height            : 36px;
+		position          : absolute;
+		right             : 32px;
+		width             : 36px;
+		z-index           : 1;
+	}
+
+	img {
+		border-radius : 6px;
+		box-shadow    : 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		filter        : blur(2px);
+		object-fit    : cover;
+		width         : 100%;
+	}
+}
+
+.swiper--reviews {
+	.swiper-slide {
+		width : 100%;
+
+		@media screen and (min-width : $break-table) {
+			width : 50%;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			width : 25%;
+		}
+	}
+}

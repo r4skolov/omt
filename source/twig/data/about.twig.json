@@ -1,0 +1,75 @@
+{
+	"trustabout" : {
+		"list" : [
+			{
+				"img" : "trust-1"
+			},
+			{
+				"img" : "trust-2"
+			},
+			{
+				"img" : "trust-3"
+			},
+			{
+				"img" : "trust-4"
+			},
+			{
+				"img" : "trust-5"
+			},
+			{
+				"img" : "trust-6"
+			}
+		]
+	},
+	"reviews"    : {
+		"list" : [
+			{
+				"img" : "big-certificate"
+			},
+			{
+				"img" : "big-certificate"
+			},
+			{
+				"img" : "big-certificate"
+			},
+			{
+				"img" : "big-certificate"
+			},
+			{
+				"img" : "big-certificate"
+			},
+			{
+				"img" : "big-certificate"
+			}
+		]
+	},
+	"team"       : {
+		"list" : [
+			{
+				"img"  : "team-1",
+				"pos"  : "Генеральный директор",
+				"name" : "Тиморьянов Ильшат"
+			},
+			{
+				"img"  : "team-2",
+				"pos"  : "Коммерческий директор",
+				"name" : "Саитов Радик"
+			},
+			{
+				"img"  : "team-3",
+				"pos"  : "Исполняющий директор",
+				"name" : "Коньков Денис"
+			},
+			{
+				"img"  : "team-4",
+				"pos"  : "Менеджер по продажам",
+				"name" : "Воронина Анастасия"
+			},
+			{
+				"img"  : "team-1",
+				"pos"  : "Генеральный директор",
+				"name" : "Тиморьянов Ильшат"
+			}
+		]
+	}
+}

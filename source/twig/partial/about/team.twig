@@ -1,0 +1,47 @@
+{% if data|length > 0 %}
+	<section class="team section-offset" data-slider="team-slider">
+		<div class="container">
+			<div class="section-head">
+				<h2 class="section-title team__title">
+					{{ 'Наша команда' }}
+				</h2>
+				<div class="swiper-nav">
+					<div class="team-prev swiper-button swiper-button-prev">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+						     fill="none">
+							<path d="M19 7.86517H1M1 7.86517L6.26316 2.86719M1 7.86517L6.26316 12.8632"
+							      stroke="#2852A9"
+							      stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="team-next swiper-button swiper-button-next">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+						     fill="none">
+							<path d="M1 7.86517H19M19 7.86517L13.7368 2.86719M19 7.86517L13.7368 12.8632"
+							      stroke="#2852A9"
+							      stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="team__text">
+				<p>
+					{{ 'Наша компания не просто объединение наемных специалистов, мы разработали эффективную схему сотрудничества, которая гарантирует наилучшие результаты для наших клиентов.' }}
+				</p>
+			</div>
+			<div class="team__wrap">
+				<div class="swiper swiper--team">
+					<div class="swiper-wrapper">
+						{% for item in data.list %}
+							<div class="swiper-slide">
+								{% include "../../blocks/team-item.twig" with {
+									'item': item,
+								} only %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

@@ -1,0 +1,77 @@
+.banner__wrapper {
+	background-color    : $blue;
+	background-image    : url("../images/home/banner/banner-bg.png");
+	background-position : 24px 13px;
+	background-repeat   : no-repeat;
+	background-size     : contain;
+	border-radius       : $border-radius;
+	overflow            : hidden;
+	padding             : 24px 16px;
+
+	@media screen and (min-width : $break-table) {
+		align-items         : center;
+		background-position : 65px -20px;
+		display             : flex;
+		justify-content     : space-between;
+		padding             : 27px 24px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		background-position : 24px -30px;
+		padding             : 24px 48px;
+	}
+}
+
+.banner__text {
+	color         : $white;
+	font-size     : 24px;
+	font-weight   : 500;
+	line-height   : 32px;
+	margin-bottom : 24px;
+
+	@media screen and (min-width : $break-table) {
+		margin-bottom : 0;
+		margin-right  : 20px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 36px;
+		line-height : 44px;
+		max-width   : 674px;
+	}
+}
+
+.banner__text--about {
+	font-size   : 22px;
+	font-weight : 500;
+	line-height : 28px;
+
+	@media screen and (min-width : $break-table) {
+		font-size   : 20px;
+		line-height : 26px;
+		max-width   : 420px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 24px;
+		line-height : 28px;
+		max-width   : 674px;
+	}
+}
+
+.banner__img {
+	text-align : center;
+
+	img {
+
+	}
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : -40px;
+		margin-right  : -25px;
+	}
+}

@@ -1,0 +1,14 @@
+{% extends "../template/layout.twig" %}
+{# {% set menuHome = true %} #}
+{% block title %}{{ "Корзина" }}{% endblock %}
+{% block page %}
+	{% include "../partial/cart/cart.twig" with {
+		'data' : cart
+	} only %}
+	{% include "../partial/product/interesting-slider.twig" with {
+		'data' : Interesting
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+{% endblock %}

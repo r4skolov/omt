@@ -1,0 +1,32 @@
+{% if data|length > 0 %}
+	<section class="market-products section-offset">
+		<div class="container">
+			<div class="market-products__head">
+				<h2 class="section-title market-products__title">
+					{{ 'Продукты' }}
+				</h2>
+				<div class="market-products__wrapper">
+					<div class="ios-btn">
+						<input type="checkbox" class="ios-switch" id="ios-btn">
+						<label for="ios-btn"><span class="sw"></span></label>
+					</div>
+					<div class="market-products__text">
+						{{ 'Показывать фильтры' }}
+					</div>
+				</div>
+			</div>
+			<div class="market-products__wrap">
+				<div class="market-products__grid">
+					{% for item in data.list %}
+						{% include "../../blocks/product-card.twig" with {
+							'item': item,
+							class : 'product-card--market'
+						} only %}
+					{% endfor %}
+				</div>
+				{% include "../../blocks/market-filter.twig" %}
+			</div>
+			{% include "../../blocks/pagination.twig" %}
+		</div>
+	</section>
+{% endif %}

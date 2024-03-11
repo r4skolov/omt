@@ -1,0 +1,33 @@
+{% extends "../template/layout.twig" %}
+{% set menuAbout = true %}
+{% block title %}{{ "О компании" }}{% endblock %}
+{% block page %}
+	{% include "../partial/site/breadcrumbs.twig" with {
+		breadcrumbs: 'О компании',
+	} only %}
+	{% include "../partial/about/about-hero.twig" %}
+	{% include "../partial/home/banner.twig" with {
+		bannerText: 'В настоящее время мы активно работаем на рынках России и стран ближнего зарубежья, но также планируем расширить нашу географию деятельности.',
+		class : 'banner__text--about',
+	} only %}
+	{% include "../partial/home/trust.twig" with {
+		'data' : trustabout,
+		trustText : 'Компании, которые стремятся к успеху, доверяют нам уже многие годы. Мы гордимся постоянно растущим количеством наших партнеров и ценим их доверие.',
+		class : 'trust__head--text',
+	} only %}
+	{% include "../partial/about/reviews.twig" with {
+		'data' : reviews,
+	} only %}
+	{% include "../partial/about/advantages.twig" %}
+	{% include "../partial/about/team.twig" with {
+		'data' : team
+	} only %}
+	{% include "../partial/home/feedback.twig" with {
+		titleFeedback: 'Хотите стать частью нашей команды?',
+		textFeedback: 'Оставьте заявку, заполнив форму ниже.'
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+	<script src="js/glightbox.min.js"></script>
+{% endblock %}

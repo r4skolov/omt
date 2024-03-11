@@ -1,0 +1,120 @@
+
+.accordion {
+	background-color : transparent;
+	border-radius    : 8px;
+	padding          : 24px 40px 0 40px;
+	width            : 100%;
+
+	&:not(:last-child) {
+		margin-bottom : 16px;
+	}
+}
+
+.accordion__control {
+	align-items      : center;
+	background-color : transparent;
+	border           : none;
+	display          : flex;
+	justify-content  : space-between;
+	padding          : 0 0 24px 0;
+	width            : 100%;
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.accordion.open .accordion__content {
+	grid-template-rows : 1fr;
+	padding-bottom     : 40px;
+}
+
+.accordion__content {
+	display            : grid;
+	grid-template-rows : 0fr;
+	position           : relative;
+	transition         : grid-template-rows 500ms, margin-top 500ms;
+}
+
+.accordion__main {
+	overflow : hidden;
+}
+
+.accordion__icon {
+	height      : 24px;
+	margin-left : 22px;
+
+	svg {
+		transform  : rotate(0deg);
+		transition : transform .3s ease;
+	}
+}
+
+.accordion.open .accordion__icon {
+	svg {
+		transform  : rotate(180deg);
+		transition : transform .3s ease;
+	}
+}
+
+.accordion__title {
+	color       : $dark;
+	font-size   : 20px;
+	font-style  : normal;
+	font-weight : 500;
+	line-height : 28px;
+	text-align  : start;
+
+	@media screen and (min-width : $break-table) {
+		font-size   : 24px;
+		line-height : 32px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+
+.accordion--filter {
+	padding : 0;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 6 span;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+
+	&:not(:last-child) {
+		margin-bottom : 24px;
+	}
+
+	&.open .accordion__content {
+		grid-template-rows : 1fr;
+		padding-bottom     : 0;
+	}
+
+	.accordion__content {
+		padding-top : 10px;
+	}
+}
+
+.accordion__control--filter {
+	border-bottom  : 1px solid $white;
+	padding-bottom : 12px;
+}
+
+.accordion__title--filter {
+	color       : $white;
+	font-size   : 16px;
+	font-weight : 500;
+	line-height : 20px;
+}
+
+.accordion__icon--filter {
+	height : 18px;
+	width  : 12px;
+}
+
+

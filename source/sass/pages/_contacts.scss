@@ -1,0 +1,153 @@
+.contacts {
+	padding : 24px 0;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding : 60px 0 96px 0;
+	}
+}
+
+.contacts__wrapper {
+	background-color : $second-blue;
+	border-radius    : 12px;
+	padding          : 16px 16px;
+
+	@media screen and (min-width : $break-table) {
+		padding : 24px 24px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding : 48px 48px;
+	}
+}
+
+.contacts__grid {
+	display               : grid;
+	grid-gap              : 24px;
+	grid-template-columns : repeat(4, 1fr);
+
+	@media screen and (min-width : $break-table) {
+		grid-template-columns : repeat(12, 1fr);
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.contacts__main {
+	grid-column : 4 span;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 6 span;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.contacts__title {
+	color         : $dark;
+	font-size     : 28px;
+	font-weight   : 600;
+	line-height   : 34px;
+	margin-bottom : 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size     : 38px;
+		line-height   : 38px;
+		margin-bottom : 32px;
+	}
+}
+
+.contacts__item {
+	align-items : start;
+	display     : flex;
+
+	&:not(:last-child) {
+		margin-bottom : 16px;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			margin-bottom : 24px;
+		}
+	}
+}
+
+.contacts__icon {
+	flex-shrink  : 0;
+	margin-right : 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.contacts__text {
+	color       : $dark;
+	font-size   : 14px;
+	font-weight : 400;
+	line-height : 22px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 20px;
+		line-height : 28px;
+		max-width   : 473px;
+	}
+
+	p {
+		&:not(:last-child) {
+			margin-bottom : 12px;
+		}
+	}
+}
+
+.contacts__link {
+	color       : $dark;
+	font-size   : 14px;
+	font-weight : 400;
+	line-height : 22px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 20px;
+		line-height : 28px;
+	}
+}
+
+.map {
+	border-radius : 12px;
+	grid-column   : 4 span;
+	height        : 294px;
+	overflow      : hidden;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 6 span;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		height : 332px;
+	}
+}

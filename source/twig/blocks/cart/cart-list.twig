@@ -1,0 +1,7 @@
+<div class="cart-item">
+	{% for item in data.list %}
+		{% include "cart-item.twig" with {
+			'item': item,
+		} only %}
+	{% endfor %}
+</div>

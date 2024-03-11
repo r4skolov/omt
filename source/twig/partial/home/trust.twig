@@ -1,0 +1,62 @@
+{% if data|length > 0 %}
+	<section class="trust section-offset" data-slider="trust-slider">
+		<div class="container">
+			<div class="section-head trust__head{{ class? ' ' ~ class }}">
+				{% if trustHead == true %}
+					<h2 class="section-title trust__title">
+						{{ "Нам доверяют" }}
+					</h2>
+				{% else %}
+					<div class="trust__text">
+						<h2 class="visually-hidden">
+							{{ "Нам доверяют" }}
+						</h2>
+						<p>
+							{{ trustText }}
+						</p>
+					</div>
+				{% endif %}
+				<div class="swiper-nav">
+					<div class="trust-prev swiper-button swiper-button-prev">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+						     fill="none">
+							<path d="M19 7.86517H1M1 7.86517L6.26316 2.86719M1 7.86517L6.26316 12.8632"
+							      stroke="#2852A9"
+							      stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="trust-next swiper-button swiper-button-next">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+						     fill="none">
+							<path d="M1 7.86517H19M19 7.86517L13.7368 2.86719M19 7.86517L13.7368 12.8632"
+							      stroke="#2852A9"
+							      stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="trust__wrapper">
+				<div class="swiper swiper--trust">
+					<div class="swiper-wrapper">
+						{% for value in data.list %}
+							<div class="swiper-slide">
+								{% if value.img %}
+									<div class="trust-img">
+										<picture>
+											<source srcset="images/home/trust/{{ value.img }}.webp 1x, images/home/trust/{{ value.img }}@2x.webp 1.3x"
+											        type="image/webp">
+											<source srcset="images/home/trust/{{ value.img }}.jpg 1x, images/home/trust/{{ value.img }}@2x.jpg 1.3x"
+											        type="image/jpg">
+											<img src="images/home/trust/{{ value.img }}.jpg" width="288"
+											     height="120" alt="">
+										</picture>
+									</div>
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

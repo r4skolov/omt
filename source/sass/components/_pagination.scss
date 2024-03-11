@@ -1,0 +1,28 @@
+.pagination {
+	margin-top : 24px;
+
+	@media screen and (min-width : $break-desktop) {
+		margin-top : 48px;
+	}
+}
+
+.pagination__list {
+	align-items     : center;
+	display         : flex;
+	justify-content : center;
+}
+
+.pagination__item {
+	& + & {
+		margin-left : 12px;
+	}
+}
+
+.pagination__link {
+	align-items : center;
+	color       : $blue;
+	display     : flex;
+	font-size   : 18px;
+	font-weight : 500;
+	line-height : 20px;
+}

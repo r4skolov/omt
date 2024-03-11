@@ -1,0 +1,98 @@
+// Arrow
+.swiper-button-prev,
+.swiper-button-next {
+	align-items                 : center;
+	border                      : 1px solid $blue;
+	border-radius               : 100%;
+	cursor                      : pointer;
+	display                     : inline-flex;
+	flex                        : 0 0 46px;
+	height                      : 24px;
+	justify-content             : center;
+	outline                     : 0;
+	position                    : relative;
+	-webkit-tap-highlight-color : transparent;
+	transition                  : background-color .3s ease;
+	user-select                 : none;
+	vertical-align              : top;
+	width                       : 24px;
+
+	@media screen and (min-width : $break-desktop) {
+		height : 40px;
+		width  : 40px;
+	}
+
+	&:after {
+		background-color : transparent;
+		border           : 1px solid $white;
+		border-radius    : 100%;
+		content          : '';
+		height           : 23px;
+		left             : 50%;
+		opacity          : 0;
+		position         : absolute;
+		top              : 50%;
+		transform        : translate(-50%, -50%);
+		transition       : visibility .3s ease, opacity .3s ease;
+		visibility       : hidden;
+		width            : 23px;
+
+		@media screen and (min-width : $break-desktop) {
+			height : 40px;
+			width  : 40px;
+		}
+	}
+
+	@media screen and (min-width : 1076px) {
+		&:hover {
+			background-color : $blue;
+
+			svg {
+				path {
+					stroke : $white;
+				}
+			}
+
+			&:after {
+				opacity    : 1;
+				visibility : visible;
+			}
+		}
+	}
+
+	svg {
+		height : 8.5px;
+		width  : 12px;
+
+		@media screen and (min-width : $break-desktop) {
+			height : auto;
+			width  : auto;
+		}
+
+		path {
+			stroke     : $blue;
+			transition : stroke .3s ease;
+		}
+	}
+
+	&.swiper-button-disabled {
+		cursor         : auto;
+		opacity        : 0.3;
+		pointer-events : none;
+	}
+}
+
+.swiper-button-prev {
+	margin-right : 6px;
+
+}
+
+.swiper-button-next {
+	margin-left : 6px;
+}
+
+.slider__pagination {
+	display         : flex;
+	flex-flow       : row nowrap;
+	justify-content : space-between;
+}

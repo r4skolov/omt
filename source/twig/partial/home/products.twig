@@ -1,0 +1,48 @@
+{% if data|length > 0 %}
+	<section class="products section-offset" data-slider="products-slider">
+		<div class="container">
+			<div class="products__wrapper">
+				<div class="section-head product__head">
+					<h2 class="section-title products__title">
+						{{ "Продукты" }}
+					</h2>
+					<div class="section-head__wrap products__head-wrap">
+						<a href="#" class="b-btn b-btn--link">
+							{{ "Перейти в каталог" }}
+						</a>
+						<div class="swiper-nav">
+							<div class="products-prev swiper-button swiper-button-prev">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+								     fill="none">
+									<path d="M19 7.86517H1M1 7.86517L6.26316 2.86719M1 7.86517L6.26316 12.8632"
+									      stroke="#2852A9"
+									      stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="products-next swiper-button swiper-button-next">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
+								     fill="none">
+									<path d="M1 6.99713H19M19 6.99713L13.7368 1.99915M19 6.99713L13.7368 11.9951"
+									      stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="products__wrap">
+					<div class="swiper swiper--products">
+						<div class="swiper-wrapper">
+							{% for item in data.list %}
+								<div class="swiper-slide">
+									{% include "../../blocks/product-card.twig" with {
+										'item': item,
+									} only %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

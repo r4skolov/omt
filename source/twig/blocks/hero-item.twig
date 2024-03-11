@@ -1,0 +1,40 @@
+<div class="hero-item">
+	<div class="hero-item__wrap">
+		{% if item.logo %}
+			<div class="hero-item__logo">
+				<picture>
+					<source srcset="images/home/hero/{{ item.logo }}.webp 1x, images/home/hero/{{ item.logo }}@2x.webp 1.3x"
+					        type="image/webp">
+					<source srcset="images/home/hero/{{ item.logo }}.jpg 1x, images/home/hero/{{ item.logo }}@2x.jpg 1.3x"
+					        type="image/jpg">
+					<img src="images/home/hero/{{ item.logo }}.jpg" width="100"
+					     height="62" alt="">
+				</picture>
+			</div>
+		{% endif %}
+		{% if item.name %}
+			<h1 class="hero-item__title">
+				{{ item.name }}
+			</h1>
+		{% endif %}
+		{% if item.text %}
+			<div class="hero-item__text">
+				<p>
+					{{ item.text }}
+				</p>
+			</div>
+		{% endif %}
+	</div>
+	{% if item.img %}
+		<div class="hero-item__img">
+			<picture>
+				<source srcset="images/home/hero/{{ item.img }}.webp 1x, images/home/hero/{{ item.img }}@2x.webp 1.3x"
+				        type="image/webp">
+				<source srcset="images/home/hero/{{ item.img }}.jpg 1x, images/home/hero/{{ item.img }}@2x.jpg 1.3x"
+				        type="image/jpg">
+				<img src="images/home/hero/{{ item.img }}.jpg" width="600"
+				     height="350" alt="">
+			</picture>
+		</div>
+	{% endif %}
+</div>

@@ -1,0 +1,36 @@
+{% extends "../template/layout.twig" %}
+{% set menuContacts = true %}
+{% block title %}{{ "Контакты" }}{% endblock %}
+{% block page %}
+	{% include "../partial/contacts/contacts.twig" %}
+{% endblock %}
+{% block scripts %}
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=dab272a3-e76c-4c32-a3e7-22c8301a5ff6&lang=ru_RU">
+	</script>
+	<script>
+		function init() {
+			let center = [55.656356069078655, 37.554169500000015];
+			let map = new ymaps.Map('map', {
+				center : center,
+				zoom   : 17
+			});
+			// let placemark = new ymaps.Placemark([55.792032568920874, 37.93563], {}, {
+			// 	iconLayout      : 'default#image',
+			// 	iconImageHref   : './images/icon/pin.svg',
+			// 	iconImageSize   : [51, 64],
+			// 	iconImageOffset : [0, 0],
+			// });
+			// map.geoObjects.add(placemark);
+			map.controls.remove('geolocationControl'); // удаляем геолокацию
+			map.controls.remove('searchControl'); // удаляем поиск
+			map.controls.remove('trafficControl'); // удаляем контроль трафика
+			map.controls.remove('typeSelector'); // удаляем тип
+			map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+			// map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+			map.controls.remove('rulerControl'); // удаляем контрол правил
+			// map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+		}
+
+		ymaps.ready(init);
+	</script>
+{% endblock %}

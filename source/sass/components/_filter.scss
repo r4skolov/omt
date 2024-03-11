@@ -1,0 +1,59 @@
+.market-filter {
+	background-color : $blue;
+	border-radius    : 12px;
+	display          : none;
+	margin-bottom    : 20px;
+	order            : -1;
+	padding          : 24px 12px;
+
+	@media screen and (min-width : $break-table) {
+		grid-column-gap       : 20px;
+		grid-template-columns : repeat(12, 1fr);
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		display        : flex;
+		flex-direction : column;
+		margin-bottom  : 0;
+		margin-left    : 24px;
+		min-width      : 288px;
+		order          : 1;
+	}
+
+	&.active {
+		display : block;
+
+		@media screen and (min-width : $break-table) {
+			display : grid;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+
+		}
+	}
+}
+
+
+.market-filter__btn {
+	grid-column : 7/13;
+	margin-top  : 42px;
+
+	.b-btn {
+		width : 100%;
+	}
+
+	.b-btn + .b-btn {
+		margin-left : 0;
+		margin-top  : 12px;
+	}
+}
+
+.filter {
+
+}
+
+.filter__item {
+	&:not(:last-child) {
+		margin-bottom : 10px;
+	}
+}

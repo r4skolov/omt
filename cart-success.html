@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Корзина успех</title>
+	<link rel="stylesheet" href="css/glightbox.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script>/*! @formatter:off modernizr 3.6.0 (Custom Build) | MIT https://modernizr.com/download/?-overflowscrolling-webp-setclasses !*/!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,s,a;for(var l in _)if(_.hasOwnProperty(l)){if(e=[],n=_[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],a=s.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),w.push((o?"":"no-")+a.join("-"))}}function i(e){var n=S.className,t=Modernizr._config.classPrefix||"";if(B&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),B?S.className.baseVal=n:S.className=n)}function s(e,n){if("object"==typeof e)for(var t in e)b(e,t)&&s(t,e[t]);else{e=e.toLowerCase();var r=e.split("."),o=Modernizr[r[0]];if(2==r.length&&(o=o[r[1]]),"undefined"!=typeof o)return Modernizr;n="function"==typeof n?n():n,1==r.length?Modernizr[r[0]]=n:(!Modernizr[r[0]]||Modernizr[r[0]]instanceof Boolean||(Modernizr[r[0]]=new Boolean(Modernizr[r[0]])),Modernizr[r[0]][r[1]]=n),i([(n&&0!=n?"":"no-")+r.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function a(e,n){return!!~(""+e).indexOf(n)}function l(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):B?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function A(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?u(o,t||n):o);return!1}function c(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var s=i.error?"error":"log";i[s].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function p(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(){var e=n.body;return e||(e=l(B?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var i,s,a,A,u="modernizr",f=l("div"),c=d();if(parseInt(r,10))for(;r--;)a=l("div"),a.id=o?o[r]:u+(r+1),f.appendChild(a);return i=l("style"),i.type="text/css",i.id="s"+u,(c.fake?c:f).appendChild(i),c.appendChild(f),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),f.id=u,c.fake&&(c.style.background="",c.style.overflow="hidden",A=S.style.overflow,S.style.overflow="hidden",S.appendChild(c)),s=t(f,e),c.fake?(c.parentNode.removeChild(c),S.style.overflow=A,S.offsetHeight):f.parentNode.removeChild(f),!!s}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(p(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+p(n[o])+":"+r+")");return i=i.join(" or "),m("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==c(e,null,"position")})}return t}function h(e,n,o,i){function s(){f&&(delete U.style,delete U.modElem)}if(i=r(i,"undefined")?!1:i,!r(o,"undefined")){var u=g(e,o);if(!r(u,"undefined"))return u}for(var f,c,p,d,m,h=["modernizr","tspan","samp"];!U.style&&h.length;)f=!0,U.modElem=l(h.shift()),U.style=U.modElem.style;for(p=e.length,c=0;p>c;c++)if(d=e[c],m=U.style[d],a(d,"-")&&(d=A(d)),U.style[d]!==t){if(i||r(o,"undefined"))return s(),"pfx"==n?d:!0;try{U.style[d]=o}catch(v){}if(U.style[d]!=m)return s(),"pfx"==n?d:!0}return s(),!1}function v(e,n,t,o,i){var s=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+x.join(s+" ")+s).split(" ");return r(n,"string")||r(n,"undefined")?h(a,n,o,i):(a=(e+" "+E.join(s+" ")+s).split(" "),f(a,n,t))}function y(e,n,r){return v(e,t,t,n,r)}var w=[],_=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){_.push({name:e,fn:n,options:t})},addAsyncTest:function(e){_.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var b,S=n.documentElement,B="svg"===S.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;b=r(e,"undefined")||r(e.call,"undefined")?function(e,n){return n in e&&r(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,r;for(e=0;e<t.length;e++)(r=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=s}),Modernizr.addAsyncTest(function(){function e(e,n,t){function r(n){var r=n&&"load"===n.type?1==o.width:!1,i="webp"===e;s(e,i&&r?new Boolean(r):r),t&&t(n)}var o=new Image;o.onerror=r,o.onload=r,o.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],t=n.shift();e(t.name,t.uri,function(t){if(t&&"load"===t.type)for(var r=0;r<n.length;r++)e(n[r].name,n[r].uri)})});var Q="Moz O ms Webkit",x=C._config.usePrefixes?Q.split(" "):[];C._cssomPrefixes=x;var E=C._config.usePrefixes?Q.toLowerCase().split(" "):[];C._domPrefixes=E;var T={elem:l("modernizr")};Modernizr._q.push(function(){delete T.elem});var U={style:T.elem.style};Modernizr._q.unshift(function(){delete U.style}),C.testAllProps=v,C.testAllProps=y,Modernizr.addTest("overflowscrolling",y("overflowScrolling","touch",!0)),o(),i(w),delete C.addTest,delete C.addAsyncTest;for(var P=0;P<Modernizr._q.length;P++)Modernizr._q[P]();e.Modernizr=Modernizr}(window,document);/*! @formatter:on */</script>
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<!--Header-->
+		<header id="header" class="header">
+			<div class="container">
+				<div class="header__main">
+					<div class="header__wrapper">
+						<a href="index.html" class="header__logo logo">
+							<img class="logo__img" src="images/icon/logo.svg" alt="OMT" width="124" height="89">
+							<div class="logo__text">20 Лет</div>
+						</a>
+						<div class="header__panel">
+							<div class="header__top" data-menu>
+								<div class="header__wrap">
+									<nav class="header__menu nav">
+										<ul class="nav__list list-reset ">
+											<li class="nav__item">
+												<a href="#" class="nav__link ">
+													<span>Продукты</span>
+												</a>
+											</li>
+											<li class="nav__item">
+												<a href="markets.html" class="nav__link ">
+													<span>Рынки</span>
+												</a>
+											</li>
+											<li class="nav__item">
+												<a href="about.html" class="nav__link ">
+													<span>О компании</span>
+												</a>
+											</li>
+											<li class="nav__item">
+												<a href="#" class="nav__link ">
+													<span>Методология</span>
+												</a>
+											</li>
+											<li class="nav__item">
+												<a href="news-list.html" class="nav__link ">
+													<span>Новости</span>
+												</a>
+											</li>
+											<li class="nav__item">
+												<a href="contacts.html" class="nav__link ">
+													<span>Контакты</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+									<div class="header__contacts">
+										<div class="s-block ">
+											<a href="#" class="s-block__item" target="_blank" rel="noopener nofollow">
+												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
+													<path d="M9.62509 10.7503C9.45074 10.7503 9.28581 10.7914 9.13882 10.8616L15.473 17.2658C15.7674 17.5639 16.221 17.5639 16.5159 17.2658L22.8615 10.8613C22.7145 10.7912 22.5495 10.75 22.3751 10.75L9.62509 10.7503ZM23.3887 11.389L18.6308 16.1997L23.3887 20.6177C23.4604 20.4694 23.5 20.3017 23.5 20.1254L23.5 11.8754C23.5 11.701 23.4589 11.536 23.3887 11.389ZM8.60555 11.3949C8.53727 11.54 8.5 11.7037 8.5 11.8753L8.5 20.1253C8.5 20.3015 8.53963 20.4693 8.6113 20.6175L13.3635 16.2055L8.60555 11.3949ZM18.0978 16.733L17.049 17.7936C16.4697 18.3788 15.5186 18.3796 14.9396 17.7936L13.8967 16.7389L9.15057 21.1451C9.29457 21.2118 9.45545 21.2507 9.62522 21.2507L22.3753 21.2507C22.5451 21.2507 22.706 21.212 22.85 21.1453L18.0978 16.733Z" fill="white" />
+												</svg>
+											</a>
+											<a href="#" class="s-block__item" target="_blank" rel="noopener nofollow">
+												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M9.06825 15.1568C13.0825 13.3383 15.7594 12.1392 17.0989 11.5596C20.9236 9.90462 21.7187 9.61625 22.2381 9.60338C22.3524 9.60054 22.608 9.62772 22.7744 9.7637C22.9149 9.87852 22.9545 10.0346 22.9736 10.1443C22.9927 10.2539 23.0173 10.5038 23.0005 10.6993C22.8077 12.9306 21.9451 18.3481 21.5045 20.8487C21.3181 21.9068 20.9392 22.2637 20.5704 22.3009C19.7688 22.3817 19.1556 21.7693 18.3752 21.2546C17.154 20.4493 16.4639 19.9474 15.2785 19.1615C13.9086 18.2533 14.7892 17.743 15.5607 16.9135C15.7627 16.6965 19.2744 13.3905 19.3407 13.0923C19.349 13.055 19.356 12.9161 19.2748 12.8434C19.1935 12.7706 19.0745 12.7965 18.9886 12.817C18.8669 12.8461 16.9338 14.1699 13.1894 16.7883C12.6408 17.1785 12.1428 17.3702 11.6954 17.3633C11.2022 17.3558 10.2517 17.0884 9.54488 16.8592C8.67796 16.578 7.98947 16.4308 8.04602 15.9429C8.07548 15.6887 8.41622 15.4267 9.06825 15.1568Z" fill="white" />
+												</svg>
+											</a>
+										</div>
+										<a href="tel:+79999999999" class="header__phone">+7 999 999 99 99</a>
+										<button type="button" class="b-btn b-btn--white">Перезвонить</button>
+									</div>
+								</div>
+							</div>
+							<div class="header__bottom">
+								<div class="header__search">
+									<button type="button" class="search-btn">
+										<img src="images/icon/search-white.svg" alt="" width="24" height="24">
+									</button>
+									<form action="#" class="form form--search" id="form-search">
+										<label for="header-search">
+											<input id="header-search" type="text" class="form__input" placeholder="Введите запрос" data-search="input">
+										</label>
+										<button type="button" class="b-btn b-btn--white disabled" data-search="button">Найти</button>
+										<button type="button" class="form__close">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+												<path d="M0.21097 0.436878C0.492264 0.155584 0.948331 0.155584 1.22962 0.436878L15.4908 14.698C15.7721 14.9793 15.7721 15.4354 15.4908 15.7167C15.2095 15.998 14.7534 15.998 14.4721 15.7167L0.21097 1.45553C-0.0703232 1.17424 -0.0703236 0.718171 0.21097 0.436878Z" fill="white" />
+												<path d="M0.509218 15.5632C0.227925 15.2819 0.227925 14.8258 0.509218 14.5445L14.7704 0.283358C15.0517 0.00206452 15.5077 0.00206409 15.789 0.283358C16.0703 0.564651 16.0703 1.02072 15.789 1.30201L1.52787 15.5632C1.24658 15.8445 0.790512 15.8445 0.509218 15.5632Z" fill="white" />
+											</svg>
+										</button>
+									</form>
+								</div>
+								<div class="lang-panel">
+									<a href="#" class="lang-panel__link">
+										ENG
+									</a>
+								</div>
+								<a href="cart.html" class="header__cart">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_601_4785)">
+											<path d="M9.16683 7.49992H10.8335V4.99992H13.3335V3.33325H10.8335V0.833252H9.16683V3.33325H6.66683V4.99992H9.16683V7.49992ZM5.8335 14.9999C4.91683 14.9999 4.17516 15.7499 4.17516 16.6666C4.17516 17.5833 4.91683 18.3333 5.8335 18.3333C6.75016 18.3333 7.50016 17.5833 7.50016 16.6666C7.50016 15.7499 6.75016 14.9999 5.8335 14.9999ZM14.1668 14.9999C13.2502 14.9999 12.5085 15.7499 12.5085 16.6666C12.5085 17.5833 13.2502 18.3333 14.1668 18.3333C15.0835 18.3333 15.8335 17.5833 15.8335 16.6666C15.8335 15.7499 15.0835 14.9999 14.1668 14.9999ZM5.97516 12.2916L6.00016 12.1916L6.75016 10.8333H12.9585C13.5835 10.8333 14.1335 10.4916 14.4168 9.97492L17.6335 4.13325L16.1835 3.33325H16.1752L15.2585 4.99992L12.9585 9.16658H7.1085L7.00016 8.94158L5.1335 4.99992L4.34183 3.33325L3.5585 1.66659H0.833496V3.33325H2.50016L5.50016 9.65825L4.37516 11.6999C4.24183 11.9333 4.16683 12.2083 4.16683 12.4999C4.16683 13.4166 4.91683 14.1666 5.8335 14.1666H15.8335V12.4999H6.1835C6.07516 12.4999 5.97516 12.4083 5.97516 12.2916Z" fill="white" />
+										</g>
+										<defs>
+											<clipPath id="clip0_601_4785">
+												<rect width="20" height="20" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+								<div class="burger-wrapper">
+									<button class="burger" aria-label="Open menu" aria-expanded="false" data-burger>
+										<span class="burger__line"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="cart-success section-offset">
+				<div class="container">
+					<h2 class="cart-success__title">Спасибо, мы уже получили вашу заявку и очень скоро с вами свяжемся.</h2>
+					<div class="cart-success__text">
+						<p>
+							А пока предлагаем вам почитать самую полезную информацию в наших телеграмм каналах:
+						</p>
+					</div>
+					<ul class="cart-success__list list-reset">
+						<li class="cart-success__item">
+							<div class="cart-success__name">
+								Битум и ПБВ
+							</div>
+							<a href="https://t.me/bitumomt" target="_blank" class="b-btn b-btn--green">
+								Подписаться
+							</a>
+						</li>
+						<li class="cart-success__item">
+							<div class="cart-success__name">
+								Около АЗС
+							</div>
+							<a href="https://t.me/okolo_AZS" target="_blank" class="b-btn b-btn--green">
+								Подписаться
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__grid">
+						<a href="index.html" class="logo footer--logo">
+							<img class="logo__img" src="images/icon/logo.svg" alt="OMT" width="124" height="89">
+							<div class="logo__text">20 Лет</div>
+						</a>
+						<div class="footer__menu">
+							<div class="footer__name">
+								Меню:
+							</div>
+							<nav class="nav">
+								<ul class="nav__list list-reset  nav__list--footer">
+									<li class="nav__item">
+										<a href="#" class="nav__link ">
+											<span>Продукты</span>
+										</a>
+									</li>
+									<li class="nav__item">
+										<a href="markets.html" class="nav__link ">
+											<span>Рынки</span>
+										</a>
+									</li>
+									<li class="nav__item">
+										<a href="about.html" class="nav__link ">
+											<span>О компании</span>
+										</a>
+									</li>
+									<li class="nav__item">
+										<a href="#" class="nav__link ">
+											<span>Методология</span>
+										</a>
+									</li>
+									<li class="nav__item">
+										<a href="news-list.html" class="nav__link ">
+											<span>Новости</span>
+										</a>
+									</li>
+									<li class="nav__item">
+										<a href="contacts.html" class="nav__link ">
+											<span>Контакты</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__social">
+							<div class="footer__name">
+								Связаться с нами:
+							</div>
+							<a class="footer__phone" href="tel:+7999999999">+7 999 999 99 99</a>
+							<div class="s-block  footer--socials">
+								<a href="#" class="s-block__item" target="_blank" rel="noopener nofollow">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
+										<path d="M9.62509 10.7503C9.45074 10.7503 9.28581 10.7914 9.13882 10.8616L15.473 17.2658C15.7674 17.5639 16.221 17.5639 16.5159 17.2658L22.8615 10.8613C22.7145 10.7912 22.5495 10.75 22.3751 10.75L9.62509 10.7503ZM23.3887 11.389L18.6308 16.1997L23.3887 20.6177C23.4604 20.4694 23.5 20.3017 23.5 20.1254L23.5 11.8754C23.5 11.701 23.4589 11.536 23.3887 11.389ZM8.60555 11.3949C8.53727 11.54 8.5 11.7037 8.5 11.8753L8.5 20.1253C8.5 20.3015 8.53963 20.4693 8.6113 20.6175L13.3635 16.2055L8.60555 11.3949ZM18.0978 16.733L17.049 17.7936C16.4697 18.3788 15.5186 18.3796 14.9396 17.7936L13.8967 16.7389L9.15057 21.1451C9.29457 21.2118 9.45545 21.2507 9.62522 21.2507L22.3753 21.2507C22.5451 21.2507 22.706 21.212 22.85 21.1453L18.0978 16.733Z" fill="white" />
+									</svg>
+								</a>
+								<a href="#" class="s-block__item" target="_blank" rel="noopener nofollow">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.06825 15.1568C13.0825 13.3383 15.7594 12.1392 17.0989 11.5596C20.9236 9.90462 21.7187 9.61625 22.2381 9.60338C22.3524 9.60054 22.608 9.62772 22.7744 9.7637C22.9149 9.87852 22.9545 10.0346 22.9736 10.1443C22.9927 10.2539 23.0173 10.5038 23.0005 10.6993C22.8077 12.9306 21.9451 18.3481 21.5045 20.8487C21.3181 21.9068 20.9392 22.2637 20.5704 22.3009C19.7688 22.3817 19.1556 21.7693 18.3752 21.2546C17.154 20.4493 16.4639 19.9474 15.2785 19.1615C13.9086 18.2533 14.7892 17.743 15.5607 16.9135C15.7627 16.6965 19.2744 13.3905 19.3407 13.0923C19.349 13.055 19.356 12.9161 19.2748 12.8434C19.1935 12.7706 19.0745 12.7965 18.9886 12.817C18.8669 12.8461 16.9338 14.1699 13.1894 16.7883C12.6408 17.1785 12.1428 17.3702 11.6954 17.3633C11.2022 17.3558 10.2517 17.0884 9.54488 16.8592C8.67796 16.578 7.98947 16.4308 8.04602 15.9429C8.07548 15.6887 8.41622 15.4267 9.06825 15.1568Z" fill="white" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<a href="#" class="footer__copyright footer-link">
+							© ООО «Консалтинговая Компания «ОМТ-Консалт»
+						</a>
+						<a href="#" class="footer__privacy footer-link">
+							Политика конфиденциальности
+						</a>
+						<a href="#" class="footer__creator footer-link">
+							Сделано в Rhino
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

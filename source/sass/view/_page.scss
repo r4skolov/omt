@@ -1,0 +1,107 @@
+* {
+	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
+}
+
+html {
+	box-sizing : border-box;
+	height     : 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing : inherit;
+}
+
+.page-wrapper {
+	display        : flex;
+	flex-direction : column;
+	min-height     : 100%;
+	overflow       : hidden;
+	position       : relative;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.main {
+	flex : 1 0 auto;
+}
+
+
+.container {
+	margin    : 0 auto;
+	max-width : 1198px;
+	padding   : 0 14px;
+	width     : 100%;
+
+	@media screen and (min-width : $break-table) {
+		max-width : 1268px;
+		padding   : 0 22px;
+	}
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.section-offset {
+	padding : 32px 0;
+
+	@media screen and (min-width : $break-table) {
+		padding : 48px 0;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.section-head {
+	align-items     : center;
+	display         : flex;
+	justify-content : space-between;
+	margin-bottom   : 24px;
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : 32px;
+	}
+
+	&__wrap {
+		align-items : center;
+		display     : flex;
+	}
+}
+
+.section-title {
+	color       : $dark;
+	font-size   : 28px;
+	font-weight : 600;
+	line-height : 34px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 48px;
+		line-height : 54px;
+	}
+}
+
+.scroll {
+	height   : 100vh;
+	overflow : hidden;
+	position : relative;
+	width    : 100vw;
+}
+
+.visually-hidden {
+	height     : 0;
+	opacity    : 0;
+	visibility : hidden;
+}

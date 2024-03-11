@@ -1,0 +1,62 @@
+{
+	"cart"        : {
+		"list" : [
+			{
+				"name" : "Рынок моторного топлива РФ",
+				"img"  : "product"
+			},
+			{
+				"name" : "Рынок моторного топлива РФ2",
+				"img"  : "product"
+			},
+			{
+				"name" : "Рынок моторного топлива РФ3",
+				"img"  : "product"
+			}
+		]
+	},
+	"Interesting" : {
+		"list" : [
+			{
+				"status" : {
+					"class" : "green",
+					"name"  : "Новинка"
+				},
+				"name"   : "Рынок моторного топлива РФ",
+				"img"    : "products-1"
+			},
+			{
+				"status" : {
+					"class" : "blue",
+					"name"  : "анализ рынка"
+				},
+				"img"    : "products-2",
+				"name"   : "Рынок СУГ РФ"
+			},
+			{
+				"status" : {
+					"class" : "green",
+					"name"  : "новинка"
+				},
+				"img"    : "products-3",
+				"name"   : "Рынок битумов Средней Азии"
+			},
+			{
+				"status" : {
+					"class" : "blue",
+					"name"  : "it"
+				},
+				"img"    : "products-4",
+				"name"   : "Статистика Мелкооптовые цены НБ на АБ и ДТ"
+			},
+			{
+				"status" : {
+					"class" : "green",
+					"name"  : "новинка"
+				},
+				"img"    : "products-1",
+				"name"   : "Рынок моторного топлива РФ"
+			}
+		]
+	}
+}

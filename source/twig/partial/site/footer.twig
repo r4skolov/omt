@@ -1,0 +1,39 @@
+<!-- Footer -->
+<footer class="footer" id="footer">
+	<div class="container">
+		<div class="footer__wrapper">
+			<div class="footer__grid">
+				<a href="index.html" class="logo footer--logo">
+					<img class="logo__img" src="images/icon/logo.svg" alt="OMT" width="124" height="89">
+					<div class="logo__text">20 {{ "Лет" }}</div>
+				</a>
+				<div class="footer__menu">
+					<div class="footer__name">
+						{{ "Меню:" }}
+					</div>
+					<nav class="nav">
+						{% include "menu.twig" with {class: 'nav__list--footer'} %}
+					</nav>
+				</div>
+				<div class="footer__social">
+					<div class="footer__name">
+						{{ "Связаться с нами:" }}
+					</div>
+					<a class="footer__phone" href="tel:+7999999999">+7 999 999 99 99</a>
+					{% include "social.twig" with {class: 'footer--socials'} %}
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<a href="#" class="footer__copyright footer-link">
+					© ООО «Консалтинговая Компания «ОМТ-Консалт»
+				</a>
+				<a href="#" class="footer__privacy footer-link">
+					Политика конфиденциальности
+				</a>
+				<a href="#" class="footer__creator footer-link">
+					Сделано в Rhino
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>

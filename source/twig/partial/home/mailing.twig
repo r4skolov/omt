@@ -1,0 +1,35 @@
+<section class="mailing section-offset">
+	<div class="container">
+		<div class="mailing__wrapper">
+			<div class="mailing__main">
+				<h2 class="mailing__title">
+					{{ "Будьте в курсе новостей" }}
+				</h2>
+				<div class="mailing__text">
+					<p>
+						{{ "Подпишитесь на нашу новостную рассылку" }}
+					</p>
+				</div>
+				<form action="#" class="form form--mailing">
+					<label class="form__label" for="mailing-email">
+						<input type="text" id="mailing-email" class="form__input" placeholder="Email">
+					</label>
+					<button type="button" class="b-btn b-btn--green">{{ "Подписаться" }}</button>
+				</form>
+				<div class="mailing__subtext">
+					{{ "Нажимая «Подписаться», я даю свое согласие на обработку персональных данных" }}
+				</div>
+			</div>
+			<div class="mailing__img">
+				<picture>
+					<source srcset="images/home/mailing/mailing.webp 1x, images/home/mailing/mailing@2x.webp 1.3x"
+					        type="image/webp">
+					<source srcset="images/home/mailing/mailing.jpg 1x, images/home/mailing/mailing@2x.png 1.3x"
+					        type="image/png">
+					<img src="images/home/mailing/mailing.png" width="422"
+					     height="274" alt="">
+				</picture>
+			</div>
+		</div>
+	</div>
+</section>

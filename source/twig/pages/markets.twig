@@ -1,0 +1,25 @@
+{% extends "../template/layout.twig" %}
+{% set menuMarkets = true %}
+{% block title %}{{ "Рынки" }}{% endblock %}
+{% block page %}
+	{% include "../partial/site/breadcrumbs.twig" with {
+		breadcrumbs: 'Рынки',
+	} only %}
+	{% include "../partial/home/hero.twig" with {
+		class : 'hero--markets',
+		'data' : hero
+	} only %}
+	{% include "../partial/home/markets.twig" with {
+		'data' : markets
+	} only %}
+	{% include "../partial/markets/products.twig" with {
+		'data' : products
+	} only %}
+	{% include "../partial/home/feedback.twig" with {
+		titleFeedback: 'Остались вопросы?',
+		textFeedback: 'Сообщите нам, что вас интересует, и мы обязательно ответим'
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+{% endblock %}

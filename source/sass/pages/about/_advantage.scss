@@ -1,0 +1,126 @@
+.advantages__title {
+	margin-bottom : 8px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : 32px;
+	}
+}
+
+.advantages__grid {
+	display               : grid;
+	grid-gap              : 16px;
+	grid-template-columns : repeat(4, 1fr);
+
+	@media screen and (min-width : $break-table) {
+		grid-gap              : 20px;
+		grid-template-columns : repeat(12, 1fr);
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		grid-gap : 24px;
+	}
+
+	.about-item--advantages {
+		grid-column : 4 span;
+		min-height  : 192px;
+
+		@media screen and (min-width : $break-table) {
+			grid-column : 6 span;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			min-height : auto;
+		}
+
+		&:nth-child(2) {
+
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				grid-row : 2/4;
+			}
+		}
+
+		&:nth-child(3) {
+
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				grid-row   : 4/9;
+				min-height : 365px;
+			}
+		}
+
+		&:nth-child(4) {
+
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				grid-row   : 2/6;
+				min-height : 333px;
+			}
+		}
+
+		&:nth-child(5) {
+
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				grid-row   : 6/9;
+				min-height : 233px;
+			}
+		}
+
+		.about-item__text {
+			max-width : none;
+
+			span {
+				font-size   : 44px;
+				font-weight : 400;
+				line-height : 44px;
+				white-space : nowrap;
+
+				@media screen and (min-width : $break-desktop) {
+					font-size   : 56px;
+					line-height : 56px;
+				}
+			}
+		}
+	}
+}
+
+.advantages__item {
+	color       : var(--dark, #121111);
+	font-size   : 16px;
+	font-weight : 400;
+	grid-column : 4 span;
+	grid-row    : 1/1;
+	line-height : 18px;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 12 span;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 24px;
+		line-height : 32px;
+	}
+}
+
+

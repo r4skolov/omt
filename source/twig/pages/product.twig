@@ -1,0 +1,19 @@
+{% extends "../template/layout.twig" %}
+{% set menuProduct = true %}
+{% block title %}{{ "Продукт" }}{% endblock %}
+{% block page %}
+	{% include "../partial/site/breadcrumbs.twig" with {
+		breadcrumbs: 'Рынки',
+	} only %}
+	{% include "../partial/product/product.twig" %}
+	{% include "../partial/product/interesting-slider.twig" with {
+		'data': Interesting
+	} only %}
+	{% include "../partial/home/feedback.twig" with {
+		titleFeedback: 'Остались вопросы?',
+		textFeedback: 'Сообщите нам, что вас интересует, и мы обязательно ответим'
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+{% endblock %}

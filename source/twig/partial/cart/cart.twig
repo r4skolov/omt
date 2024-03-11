@@ -1,0 +1,16 @@
+<section class="cart">
+	<div class="container">
+		<h2 class="section-title cart__title">
+			{{ 'Корзина' }}
+		</h2>
+		{% if data|length > 0 %}
+			<div class="cart__grid">
+				{% include "../../blocks/cart/cart-list.twig" %}
+				{% include "../../blocks/cart/cart-detail.twig" %}
+			</div>
+		{% else %}
+			<div class="cart__clean">В корзине ни чего нет.</div>
+		{% endif %}
+	</div>
+</section>
+

@@ -1,0 +1,382 @@
+.product {
+	padding : 24px 0 32px 0;
+	@media screen and (min-width : $break-table) {
+		padding : 24px 0 42px 0;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding : 32px 0 48px 0;
+	}
+}
+
+.product__grid {
+	display               : grid;
+	grid-template-columns : repeat(4, 1fr);
+	margin-bottom         : 48px;
+
+	@media screen and (min-width : $break-table) {
+		grid-template-columns : repeat(12, 1fr);
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.product__top {
+	grid-column   : 4 span;
+	grid-row      : 1;
+	margin-bottom : 16px;
+
+	@media screen and (min-width : $break-table) {
+		grid-column   : 1/5;
+		grid-row      : 1/2;
+		margin-bottom : 24px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : 48px;
+	}
+}
+
+.product__about {
+	grid-column : 4 span;
+	grid-row    : 3/3;
+
+	@media screen and (min-width : $break-table) {
+		grid-column : 1/6;
+		grid-row    : 2/6;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.product__right {
+	grid-column   : 4 span;
+	grid-row      : 2/2;
+	margin-bottom : 24px;
+
+	@media screen and (min-width : $break-table) {
+		grid-column   : 7/13;
+		grid-row      : 1/6;
+		margin-bottom : 0;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+}
+
+.product__title {
+	color         : $dark;
+	font-size     : 28px;
+	font-weight   : 600;
+	line-height   : 34px;
+	margin-bottom : 12px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size     : 48px;
+		line-height   : 54px;
+		margin-bottom : 16px;
+	}
+}
+
+.product__tags {
+	align-items : center;
+	display     : flex;
+
+	li {
+		border         : 1px solid var(--green, #5BB797);
+		border-radius  : 20px;
+		color          : $dark;
+		display        : block;
+		font-size      : 10px;
+		font-weight    : 500;
+		line-height    : 16px;
+		padding        : 6px 12px;
+		text-transform : uppercase;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			font-size   : 12px;
+			line-height : 18px;
+		}
+
+		&:not(:first-child) {
+			margin-left : 8px;
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				margin-left : 16px;
+			}
+		}
+	}
+}
+
+.product__name {
+	color         : $dark;
+	font-size     : 20px;
+	font-weight   : 600;
+	line-height   : 26px;
+	margin-bottom : 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 24px;
+		line-height : 30px;
+	}
+}
+
+.product__text {
+	color       : $dark;
+	font-size   : 14px;
+	font-weight : 400;
+	line-height : 22px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 20px;
+		line-height : 28px;
+	}
+
+	p {
+		&:not(:last-child) {
+			margin-bottom : 16px;
+
+			@media screen and (min-width : $break-table) {
+
+			}
+
+			@media screen and (min-width : $break-desktop) {
+				margin-bottom : 24px;
+			}
+		}
+	}
+}
+
+.product__link {
+	color       : $blue;
+	display     : inline-block;
+	font-size   : 14px;
+	font-weight : 500;
+	line-height : 14px;
+	margin-top  : 16px;
+	position    : relative;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 20px;
+		line-height : 20px;
+		margin-top  : 24px;
+	}
+
+	&:after {
+		background-color : $blue;
+		bottom           : -1px;
+		content          : "";
+		height           : 1px;
+		left             : 0;
+		position         : absolute;
+		width            : 100%;
+		z-index          : 1;
+	}
+}
+
+.product__img {
+
+	img {
+		border-radius : 12px;
+		height        : 100%;
+		object-fit    : cover;
+		width         : 100%;
+	}
+}
+
+.product__buttons {
+	margin-top : 16px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		align-items : center;
+		display     : flex;
+		margin-top  : 20px;
+	}
+
+	.b-btn {
+		width : 100%;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			width : 50%;
+		}
+
+		& + .b-btn {
+			margin-left : 0;
+			margin-top  : 16px;
+
+			@media screen and (min-width : $break-desktop) {
+				margin-left : 20px;
+				margin-top  : 0;
+			}
+		}
+	}
+}
+
+.accordion--product {
+	background-color : $second-blue;
+	padding          : 24px 24px 0 24px;
+
+	&:not(:last-child) {
+		margin-bottom : 16px;
+
+		@media screen and (min-width : $break-desktop) {
+			margin-bottom : 24px;
+		}
+	}
+
+	&.open {
+		.accordion__content {
+			padding-bottom : 24px;
+		}
+
+		.accordion__icon {
+			svg {
+				transform : rotate(135deg);
+			}
+		}
+
+		.accordion-svg {
+			&__bg {
+				fill : $blue;
+			}
+
+			&__line {
+				fill : $white;
+			}
+
+			&__circle {
+				stroke : $white;
+			}
+		}
+	}
+}
+
+.accordion__control--product {
+	align-items : flex-start;
+
+	&:hover {
+		.accordion-svg {
+			&__bg {
+				fill : $blue;
+			}
+
+			&__line {
+				fill : $white;
+			}
+
+			&__circle {
+				stroke : $white;
+			}
+		}
+	}
+}
+
+.accordion-svg {
+
+
+	&__bg {
+		fill       : $white;
+		transition : fill .3s ease;
+	}
+
+	&__line {
+		fill       : $blue;
+		transition : fill .3s ease;
+	}
+
+	&__circle {
+		stroke     : $blue;
+		transition : stroke .3s ease;
+	}
+}
+
+.accordion__title--product {
+	color       : $dark;
+	font-size   : 16px;
+	font-weight : 600;
+	line-height : 22px;
+
+	@media screen and (min-width : $break-table) {
+		max-width : 617px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 24px;
+		font-weight : 600;
+		line-height : 30px;
+		max-width   : 844px;
+	}
+}
+
+.accordion__icon--product {
+	height : 32px;
+	width  : 32px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		height : 48px;
+		width  : 48px;
+	}
+}
+
+.product__list {
+	margin       : 0;
+	padding-left : 20px;
+
+	li {
+		color       : $dark;
+		font-size   : 14px;
+		font-weight : 400;
+		line-height : 20px;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			font-size   : 20px;
+			font-weight : 400;
+			line-height : 28px;
+		}
+	}
+}

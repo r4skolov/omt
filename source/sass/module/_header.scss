@@ -1,0 +1,645 @@
+.header {
+	margin-top : 12px;
+}
+
+.header__main {
+	position : relative;
+	z-index  : 101;
+}
+
+.header__wrapper {
+	background-color : $blue;
+	border           : 1px solid $white;
+	border-radius    : $border-radius;
+	display          : flex;
+	padding          : 20px 20px;
+	position         : relative;
+	width            : 100%;
+}
+
+.logo {
+	display     : inline-block;
+	flex-shrink : 0;
+}
+
+.logo__img {
+	font-size : 0;
+	height    : 40px;
+	width     : 56px;
+
+	@media screen and (min-width : $break-desktop) {
+		height : 89px;
+		width  : 124px;
+	}
+}
+
+.logo__text {
+	color          : $white;
+	display        : none;
+	font-size      : 18px;
+	font-style     : normal;
+	font-weight    : 700;
+	line-height    : 20px;
+	margin-top     : 4px;
+	text-align     : center;
+	text-transform : uppercase;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		display : block;
+	}
+}
+
+.header__panel {
+	margin-left : 12px;
+	width       : 100%;
+
+	@media screen and (min-width : $break-desktop) {
+		margin-left : 25px;
+	}
+}
+
+.header__top {
+	background-color : $blue;
+	display          : flex;
+	flex-direction   : column;
+	height           : 100svh;
+	justify-content  : center;
+	opacity          : 0;
+	padding-top      : 100px;
+	position         : fixed;
+	right            : 0;
+	top              : 0;
+	transition       : visibility .3s ease, opacity .3s ease;
+	visibility       : hidden;
+	width            : 100%;
+	z-index          : -1;
+
+	&.active {
+		opacity    : 1;
+		visibility : visible;
+	}
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		align-items     : center;
+		display         : flex;
+		height          : auto;
+		justify-content : space-between;
+		margin-bottom   : 20px;
+		opacity         : 1;
+		padding-top     : 0;
+		position        : unset;
+		visibility      : visible;
+	}
+}
+
+.header__wrap {
+	max-height : 100%;
+	overflow-x : hidden;
+	overflow-y : auto;
+	padding    : 25px 0;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		align-items     : center;
+		display         : flex;
+		flex-direction  : row;
+		justify-content : space-between;
+		overflow        : visible;
+		padding         : 0;
+		width           : 100%;
+	}
+}
+
+.header__contacts {
+	align-items    : center;
+	display        : flex;
+	flex-direction : column-reverse;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		flex-direction : row;
+	}
+
+	.b-btn--white {
+		margin-bottom : 20px;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			margin-bottom : 0;
+			margin-left   : 20px;
+		}
+	}
+}
+
+.header__phone {
+	color          : $white;
+	font-size      : 14px;
+	font-style     : normal;
+	font-weight    : 500;
+	letter-spacing : 0.28px;
+	line-height    : 20px;
+	margin-bottom  : 20px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin-bottom : 0;
+		margin-left   : 20px;
+	}
+}
+
+.nav__list {
+	align-items    : center;
+	display        : flex;
+	flex-direction : column;
+	margin-bottom  : 74px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		flex-direction : row;
+		margin-bottom  : 0;
+	}
+}
+
+.nav__item {
+	&:not(:last-child) {
+		margin-bottom : 32px;
+
+		@media screen and (min-width : $break-desktop) {
+			margin-bottom : 0;
+		}
+	}
+
+	& + & {
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			margin-left : 16px;
+		}
+
+	}
+}
+
+.nav__link {
+	color       : $white;
+	font-size   : 24px;
+	font-weight : 400;
+	line-height : 20px;
+	position    : relative;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		font-size   : 16px;
+		line-height : 20px;
+
+		&:before {
+			background-color : $white;
+			bottom           : -2px;
+			content          : "";
+			height           : 1px;
+			left             : 0;
+			position         : absolute;
+			transition       : width .3s ease;
+			width            : 0;
+		}
+	}
+
+	&:hover {
+		&:before {
+			width : 100%;
+		}
+	}
+
+	&.active {
+		&:before {
+			width : 100%;
+		}
+	}
+}
+
+.s-block {
+	align-items : center;
+	display     : flex;
+}
+
+.s-block__item {
+	display : block;
+	height  : 32px;
+	width   : 32px;
+
+	& + & {
+		margin-left : 8px;
+	}
+
+	svg {
+		rect {
+			fill       : transparent;
+			stroke     : $white;
+			transition : .3s fill ease, .3s stroke ease;
+		}
+
+		path {
+			fill       : $white;
+			transition : .3s fill ease;
+		}
+	}
+
+	&:hover {
+		svg {
+			rect {
+				fill   : $white;
+				stroke : $white;
+			}
+
+			path {
+				fill : $blue;
+			}
+		}
+	}
+}
+
+.header__bottom {
+	display         : flex;
+	justify-content : flex-end;
+	width           : 100%;
+}
+
+.header__search {
+
+
+	@media screen and (min-width : $break-table) {
+		width : 100%;
+	}
+}
+
+.search-btn {
+	align-items      : center;
+	background-color : transparent;
+	border           : 1px solid $white;
+	border-radius    : 8px;
+	display          : flex;
+	height           : 40px;
+	justify-content  : center;
+	width            : 40px;
+
+	@media screen and (min-width : $break-table) {
+		display : none;
+	}
+}
+
+.form--search {
+	background-color : $blue;
+	left             : 12px;
+	opacity          : 0;
+	position         : absolute;
+	top              : 50%;
+	transform        : translateY(-50%);
+	transition       : opacity .3s ease, visibility .3s ease;
+	visibility       : hidden;
+	width            : calc(100% - 81px);
+	z-index          : 10;
+
+	&.active {
+		opacity    : 1;
+		visibility : visible;
+	}
+
+	@media screen and (min-width : $break-table) {
+		display    : block;
+		left       : unset;
+		opacity    : 1;
+		position   : relative;
+		top        : unset;
+		transform  : unset;
+		visibility : visible;
+		width      : 100%;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+
+	}
+
+	.form__input {
+		background-color : transparent;
+		border           : 1px solid $white;
+		border-radius    : 12px;
+		color            : $white;
+		font-size        : 16px;
+		font-style       : normal;
+		font-weight      : 400;
+		height           : 45px;
+		line-height      : 20px;
+		padding          : 9px 12px 9px 45px;
+		width            : 100%;
+
+		@media screen and (min-width : $break-table) {
+			height : auto;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			font-size : 18px;
+			padding   : 14px 12px 14px 45px;
+		}
+
+		&::placeholder {
+			color : rgba(255, 255, 255, 0.2);
+		}
+
+		&:focus {
+			border : 1px solid $white;
+		}
+	}
+
+	&:before {
+		background-image  : url("../images/icon/search.svg");
+		background-repeat : no-repeat;
+		content           : "";
+		display           : inline-block;
+		height            : 24px;
+		left              : 12px;
+		position          : absolute;
+		top               : 50%;
+		transform         : translateY(-50%);
+		width             : 24px;
+
+		@media screen and (min-width : $break-table) {
+
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			padding : 14px 12px 14px 45px;
+		}
+	}
+
+	.b-btn--white {
+		display     : none;
+		font-size   : 12px;
+		line-height : 20px;
+		padding     : 3.5px 16px;
+		position    : absolute;
+		right       : 12px;
+		top         : 50%;
+		transform   : translateY(-50%);
+		z-index     : 1;
+
+		@media screen and (min-width : $break-table) {
+			display : inline-flex;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			font-size : 14px;
+			padding   : 4px 16px;
+		}
+	}
+
+	.form__close {
+		background-color : transparent;
+		border           : none;
+		position         : absolute;
+		right            : 8px;
+		top              : 50%;
+		transform        : translateY(-50%);
+		z-index          : 1;
+
+		@media screen and (min-width : $break-table) {
+			display : none;
+		}
+	}
+}
+
+.header__cart {
+	align-items      : center;
+	background-color : transparent;
+	border           : 1px solid $white;
+	border-radius    : 8px;
+	display          : flex;
+	flex-shrink      : 0;
+	height           : 40px;
+	justify-content  : center;
+	margin-left      : 12px;
+	transition       : background-color .3s ease;
+	width            : 40px;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		border-radius : 20px;
+		height        : 52px;
+		width         : 60px;
+	}
+
+	img {
+		flex-shrink    : 0;
+		height         : 20px;
+		pointer-events : none;
+		width          : 20px;
+	}
+
+	svg {
+		path {
+			fill       : $white;
+			transition : fill .3s ease;
+		}
+
+		rect {
+			fill       : $white;
+			transition : fill .3s ease;
+		}
+	}
+
+	&:hover {
+		background-color : $white;
+
+		svg {
+			path {
+				fill : $blue;
+			}
+
+			rect {
+				fill : $blue;
+			}
+		}
+	}
+}
+
+
+.lang-panel {
+	align-items      : center;
+	background-color : transparent;
+	border           : 1px solid $white;
+	border-radius    : 8px;
+	display          : flex;
+	height           : 40px;
+	justify-content  : center;
+	margin-left      : 8px;
+	margin-right     : auto;
+	order            : -1;
+	position         : relative;
+	transition       : background-color .3s ease;
+	width            : 40px;
+
+
+	@media screen and (min-width : $break-table) {
+		margin-left  : 12px;
+		margin-right : 0;
+		order        : unset;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		border-radius : 20px;
+		flex-shrink   : 0;
+		height        : 52px;
+		width         : 60px;
+	}
+
+	&:hover {
+		background-color : $white;
+
+		.lang-panel__link {
+			color : $blue;
+		}
+	}
+}
+
+
+.lang-panel__link {
+	align-items     : center;
+	color           : $white;
+	display         : flex;
+	font-size       : 14px;
+	font-style      : normal;
+	font-weight     : 500;
+	justify-content : center;
+	line-height     : 20px;
+	padding         : 8px 10px;
+	text-align      : center;
+	text-transform  : uppercase;
+	transition      : color .3s ease;
+	width           : 100%;
+
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		padding         : 16px 10px;
+	}
+
+}
+
+
+.burger-wrapper {
+	align-items      : center;
+	background-color : $white;
+	border-radius    : 8px;
+	display          : flex;
+	flex-shrink      : 0;
+	height           : 40px;
+	justify-content  : center;
+	margin-left      : 12px;
+	position         : relative;
+	width            : 40px;
+	z-index          : 100;
+
+	@media screen and (min-width : $break-table) {
+
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		display : none;
+	}
+}
+
+.burger {
+	background-color : transparent;
+	border           : none;
+	color            : $blue;
+	cursor           : pointer;
+	flex-shrink      : 0;
+	height           : 16px;
+	padding          : 0;
+	position         : relative;
+	width            : 24px;
+
+
+	&::before,
+	&::after {
+		background-color : currentColor;
+		content          : "";
+		height           : 2px;
+		left             : 0;
+		position         : absolute;
+		transition       : transform 0.3s ease-in-out, top 0.3s ease-in-out;
+		width            : 100%;
+	}
+
+	&::before {
+		top : 0;
+	}
+
+	&::after {
+		top : calc(100% - 2px);
+	}
+
+	&__line {
+		background-color : currentColor;
+		border-radius    : 10px;
+		height           : 2px;
+		left             : 0;
+		position         : absolute;
+		top              : 50%;
+		transform        : translateY(-50%);
+		transition       : transform 0.3s ease-in-out;
+		width            : 100%;
+	}
+
+	&--active {
+		&::before {
+			top        : 50%;
+			transform  : rotate(45deg);
+			transition : transform 0.3s ease-in-out, top 0.3s ease-in-out;
+		}
+
+		&::after {
+			top        : 50%;
+			transform  : rotate(-45deg);
+			transition : transform 0.3s ease-in-out, top 0.3s ease-in-out;
+		}
+
+		.burger__line {
+			transform  : scale(0);
+			transition : transform 0.3s ease-in-out;
+		}
+	}
+}

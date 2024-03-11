@@ -1,0 +1,19 @@
+{% extends "../template/layout.twig" %}
+{# {% set menuHome = true %} #}
+{% block title %}{{ "Страница новости" }}{% endblock %}
+{% block page %}
+	{% include "../partial/site/breadcrumbs.twig" with {
+		breadcrumbs: 'Новости',
+	} only %}
+	{% include "../partial/news/news.twig" %}
+	{% include "../partial/home/news.twig" with {
+		'data' : news
+	} only %}
+	{% include "../partial/home/feedback.twig" with {
+		titleFeedback: 'Остались вопросы?',
+		textFeedback: 'Сообщите нам, что вас интересует, и мы обязательно ответим'
+	} only %}
+{% endblock %}
+{% block scripts %}
+	<script src="js/slider.min.js"></script>
+{% endblock %}

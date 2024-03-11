@@ -1,0 +1,39 @@
+<a href="{{ item.link }}" class="news-card">
+	{% if item.img %}
+		<div class="news-card__img">
+			<picture>
+				<source srcset="images/home/news/{{ item.img }}.webp 1x, images/home/news/{{ item.img }}@2x.webp 1.3x"
+				        type="image/webp">
+				<source srcset="images/home/news/{{ item.img }}.jpg 1x, images/home/news/{{ item.img }}@2x.jpg 1.3x"
+				        type="image/jpg">
+				<img src="images/home/news/{{ item.img }}.jpg" width="392"
+				     height="220" alt="">
+			</picture>
+		</div>
+	{% endif %}
+	{% if item.text %}
+		<div class="news-card__text">
+			<p>
+				{{ item.text }}
+			</p>
+		</div>
+	{% endif %}
+	<div class="news-card__icon">
+		<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+		     xmlns="http://www.w3.org/2000/svg">
+			<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"
+			      stroke="#2852A9"/>
+			<g>
+				<path d="M13.6578 26.2398L26.3832 13.5145M26.3832 13.5145L19.1261 13.7019M26.3832 13.5145L26.1986 20.7687"
+				      stroke="#2852A9" stroke-linecap="round"
+				      stroke-linejoin="round"/>
+			</g>
+			<defs>
+				<clipPath>
+					<rect width="19.996" height="13.9972" fill="white"
+					      transform="matrix(0.707107 -0.707107 0.707392 0.706821 8 22)"/>
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+</a>

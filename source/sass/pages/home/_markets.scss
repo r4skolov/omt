@@ -1,0 +1,104 @@
+.markets__wrapper {
+	margin : 0 -14px;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 -22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 -12px;
+	}
+}
+
+.market-card {
+	border-radius   : $border-radius;
+	display         : flex;
+	flex-direction  : column;
+	justify-content : space-between;
+	margin          : 0 14px;
+	opacity         : 0.5;
+	padding         : 24px 16px 0 16px;
+	width           : 100%;
+
+	@media screen and (min-width : $break-table) {
+		margin : 0 22px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		margin : 0 12px;
+	}
+
+	&--blue {
+		background-color : $second-blue;
+	}
+
+	&--green {
+		background-color : $second-green;
+	}
+
+	&.active {
+		opacity : 1;
+	}
+}
+
+.market-card__wrap {
+	align-items   : flex-start;
+	display       : flex;
+	margin-bottom : 24px;
+
+	@media screen and (min-width : $break-table) {
+		min-height : 60px;
+	}
+
+	@media screen and (min-width : $break-desktop) {
+		min-height : 80px;
+	}
+}
+
+.market-card__icon {
+	flex-shrink : 0;
+	height      : 48px;
+	width       : 48px;
+}
+
+.market-card__name {
+	color       : $dark;
+	font-size   : 22px;
+	font-weight : 600;
+	line-height : 26px;
+	margin-left : 16px;
+}
+
+.market-card__text {
+	color         : $dark;
+	font-size     : 18px;
+	font-style    : normal;
+	font-weight   : 400;
+	line-height   : 26px;
+	margin-bottom : 18px;
+}
+
+.market-card__img {
+	margin-top : auto;
+	text-align : center;
+
+	img {
+		object-fit : cover;
+	}
+}
+
+.swiper--markets {
+	.swiper-slide {
+		display : flex;
+		height  : auto;
+		width   : 100%;
+
+		@media screen and (min-width : $break-table) {
+			width : 50%;
+		}
+
+		@media screen and (min-width : $break-desktop) {
+			width : 25%;
+		}
+	}
+}
